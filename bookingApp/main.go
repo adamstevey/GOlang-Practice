@@ -52,4 +52,29 @@ func main() {
 		}
 	}
 
+	//////////////
+	// Switches //
+	//////////////
+
+	num := 100
+	divisor := 3
+	switch num%divisor == 1 || num%divisor == 0 {
+	case true:
+		fmt.Print("yes")
+	case false:
+		fmt.Print("No")
+	}
+
+	city := "Toronto"
+	switch city {
+	case "New York":
+		// Some code
+	case "Bejing", "Hong Kong":
+		// Some code
+	case "Rio", "Mexico City":
+		// Some code
+	case default:
+		// Some code
+	}
+
 }
