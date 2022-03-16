@@ -51,7 +51,9 @@ func main() {
 			fmt.Println("Invalid number of tickets, try again.")
 		}
 	}
+}
 
+func switches() {
 	//////////////
 	// Switches //
 	//////////////
@@ -76,5 +78,4 @@ func main() {
 	case default:
 		// Some code
 	}
-
 }
