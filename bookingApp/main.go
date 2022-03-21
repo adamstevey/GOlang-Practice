@@ -36,11 +36,7 @@ func main() {
 			fmt.Printf("Thank you %v %v for buying %v tickets.\n", userName, lastName, userTickets)
 			fmt.Printf("There are %v tickets remaing for %v.\n", remainingTickets, conferenceName)
 
-			firstNames := []string{}
-			for _, booking := range bookings {
-				var names = strings.Fields(booking)
-				firstNames = append(firstNames, names[0])
-			}
+			firstNames := printFirstNames(bookings)
 			fmt.Printf("Here is a list of bookings:\n %v\n", firstNames)
 
 			if remainingTickets == 0 {
@@ -75,7 +71,16 @@ func switches() {
 		// Some code
 	case "Rio", "Mexico City":
 		// Some code
-	case default:
-		// Some code
+	default:
+		// Some codes
 	}
+}
+
+func printFirstNames(bookings []string) []string {
+	firstNames := []string{}
+	for _, booking := range bookings {
+		var names = strings.Fields(booking)
+		firstNames = append(firstNames, names[0])
+	}
+	return firstNames
 }
